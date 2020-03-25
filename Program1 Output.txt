@@ -1,0 +1,142 @@
+========================== This is my driver ================================
+ 
+============= Testing the program to see if working as expected ===========
+p1 = 4X^4-3.8X^3 + 2.2X^2
+p1 = 4X^4-2.8X^3 + 7X^2 + X
+p1 = 4X^4-2.8X^3 + 1X^2 + X
+ 
+========================= Testing negative powers =======================
+p1 = 4X^-1 + 3X^-2 + 2X^-3
+ 
+=================== More testing to ensure correctness ====================
+p1 = 4X^4-2.8X^3 + 1X^2 + X
+p2 = -2.8X^3 + 8.3X^2 + X
+p3 = -5.6X^4 + 16.6X^3 + 2X^20X^1
+ 
+===================== Testing default constructor ======================== 
+After the default constructor, p is:    
+After the copy constructor, pc is:    
+ 
+==================== Testing insert method ============================== 
+After adding or inserting terms, p is: 13X^13 + 8X^11 + 12X^9 + 20X^2 + X
+ 
+========================= Testing degree method ========================= 
+the highest degree of p is: 13
+ 
+==================== Testing the coefficient msthod ======================
+The coefficient of the 1th power term for p is:	5
+The coefficient of the 2th power term for p is:	20
+The coefficient of the -12th power term for p is: 0
+The coefficient of the 14th power term for p is: 0
+
+==================== Testing the copy constructor ========================
+After using the copy constructor, p2 is: 8X^11 + 12X^9 + 20X^2 + X
+the degree of p2 is: 11
+
+===================== Testing the (==) overloaded operator ===============
+Checks if p and p2 are equal,  p == p2: 0
+
+===================== Testing the (=) overloaded operator =================
+p1 is: 13X^13 + 8X^11 + 12X^9 + 20X^2 + X
+Polynomial p3 = p is: 8X^11 + 12X^9 + 20X^2 + X
+
+Testing the (!=) overloaded operator 
+p3 != p2: 1
+
+
+======================= Testing the  + - += -= operators =====================
+p + p4 =   12X^13 + 20X^11 + 154X^9 + 32X^70X^1
+p - p4 =   20X^13-154X^11-64X^90X^20X^1
+p += p4 is: 13X^13 + 8X^11 + 12X^9 + 20X^2 + X
+p -= p4 is:	13X^13 + 8X^11 + 12X^9 + 20X^2 + X
+
+p6 is:	4.41X^14 + 4.5X^10
+p7 is:	1.11X^20 + 4.71X^10
+p5 is:	4.5X^10 + 4.32X^6
+p5 + p6 is:	4.41X^14 + 4.5X^10
+p5 + p7 is:	1.11X^20 + 4.71X^10
+p7 + p6 is:	8.82X^20 + 9X^10
+p5 - p7 is:	9.42X^100X^6
+p7 - p6 is:	9X^200X^10
+p6 - p5 is:	9X^100X^6
+
+==========================================================================
+-bash-4.2$ valgrind --leak-check=full ./a.out
+==5647== Memcheck, a memory error detector
+==5647== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==5647== Using Valgrind-3.14.0 and LibVEX; rerun with -h for copyright info
+==5647== Command: ./a.out
+==5647== 
+========================== This is my driver ================================
+ 
+============= Testing the program to see if working as expected ===========
+p1 = 4X^4-3.8X^3 + 2.2X^2
+p1 = 4X^4-2.8X^3 + 7X^2 + X
+p1 = 4X^4-2.8X^3 + 1X^2 + X
+ 
+========================= Testing negative powers =======================
+p1 = 4X^-1 + 3X^-2 + 2X^-3
+ 
+=================== More testing to ensure correctness ====================
+p1 = 4X^4-2.8X^3 + 1X^2 + X
+p2 = -2.8X^3 + 8.3X^2 + X
+p3 = -5.6X^4 + 16.6X^3 + 2X^20X^1
+ 
+===================== Testing default constructor ======================== 
+After the default constructor, p is:    
+After the copy constructor, pc is:    
+ 
+==================== Testing insert method ============================== 
+After adding or inserting terms, p is: 13X^13 + 8X^11 + 12X^9 + 20X^2 + X
+ 
+========================= Testing degree method ========================= 
+the highest degree of p is: 13
+ 
+==================== Testing the coefficient msthod ======================
+The coefficient of the 1th power term for p is:	5
+The coefficient of the 2th power term for p is:	20
+The coefficient of the -12th power term for p is: 0
+The coefficient of the 14th power term for p is: 0
+
+==================== Testing the copy constructor ========================
+After using the copy constructor, p2 is: 8X^11 + 12X^9 + 20X^2 + X
+the degree of p2 is: 11
+
+===================== Testing the (==) overloaded operator ===============
+Checks if p and p2 are equal,  p == p2: 0
+
+===================== Testing the (=) overloaded operator =================
+p1 is: 13X^13 + 8X^11 + 12X^9 + 20X^2 + X
+Polynomial p3 = p is: 8X^11 + 12X^9 + 20X^2 + X
+
+Testing the (!=) overloaded operator 
+p3 != p2: 1
+
+
+======================= Testing the  + - += -= operators =====================
+p + p4 =   12X^13 + 20X^11 + 154X^9 + 32X^70X^1
+p - p4 =   20X^13-154X^11-64X^90X^20X^1
+p += p4 is: 13X^13 + 8X^11 + 12X^9 + 20X^2 + X
+p -= p4 is:	13X^13 + 8X^11 + 12X^9 + 20X^2 + X
+
+p6 is:	4.41X^14 + 4.5X^10
+p7 is:	1.11X^20 + 4.71X^10
+p5 is:	4.5X^10 + 4.32X^6
+p5 + p6 is:	4.41X^14 + 4.5X^10
+p5 + p7 is:	1.11X^20 + 4.71X^10
+p7 + p6 is:	8.82X^20 + 9X^10
+p5 - p7 is:	9.42X^100X^6
+p7 - p6 is:	9X^200X^10
+p6 - p5 is:	9X^100X^6
+
+==========================================================================
+==5647== 
+==5647== HEAP SUMMARY:
+==5647==     in use at exit: 0 bytes in 0 blocks
+==5647==   total heap usage: 115 allocs, 115 frees, 3,680 bytes allocated
+==5647== 
+==5647== All heap blocks were freed -- no leaks are possible
+==5647== 
+==5647== For counts of detected and suppressed errors, rerun with: -v
+==5647== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+-bash-4.2$ 
